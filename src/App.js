@@ -1,6 +1,9 @@
 import React, {useState, useEffect} from 'react'
 import {Grid, Typography, makeStyles, Paper} from "@material-ui/core"
 import './App.css';
+import AOS from "aos";
+import "aos/dist/aos.css";
+AOS.init();
 
 const useStyles = makeStyles({
   loading:{
@@ -96,7 +99,7 @@ function App() {
 
   const populate = () => {
     return (
-      <div className={classes.card}>
+      <div className={classes.card} data-aos="fade-up" data-aos-duration={600} aos-delay={200}>
         <section className={classes.imgSection}>
           <img src={user.picture.large} className={classes.img}/>
         </section>
